@@ -49,7 +49,6 @@ int cmdscan(char *cmdbuf, struct cmd *com) {
       }
 
       while ( token != NULL ) {
-
         if ( !strcmp(token,">") || !strcmp(token,">>") ) {
             if ( com->redirect_out )
               return(-1);
@@ -80,7 +79,6 @@ int cmdscan(char *cmdbuf, struct cmd *com) {
         }
         else
             return(-1);
-
         token = strtok(NULL,separators);
     }
       return(0);
